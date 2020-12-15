@@ -16,8 +16,8 @@ public class TripPricerProxy implements ITripPricerProxy{
 	private TripPricer tripPricer;
 
 	@Override
-	public List<Provider> getTripDeals(String apiKey, UUID tripId, int adults, int children, int duration, int rewardPoints) {
-		List<Provider> providers = tripPricer.getPrice(apiKey, tripId, adults, children, duration, rewardPoints);
+	public List<Provider> getTripDeals(String apiKey, UUID id, int adults, int children, int duration, int rewardPoints) {
+		List<Provider> providers = tripPricer.getPrice(apiKey, id, adults, children, duration, rewardPoints);
 		return providers;
 	}
 	

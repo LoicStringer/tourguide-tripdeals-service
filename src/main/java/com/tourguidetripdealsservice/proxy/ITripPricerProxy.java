@@ -7,7 +7,7 @@ import tripPricer.Provider;
 
 public interface ITripPricerProxy {
 
-	List<Provider> getTripDeals(String apiKey, UUID attractionId, int adults, int children, int duration,
+	List<Provider> getTripDeals(String apiKey, UUID id, int adults, int children, int duration,
 			int rewardPoints);
 	
 }

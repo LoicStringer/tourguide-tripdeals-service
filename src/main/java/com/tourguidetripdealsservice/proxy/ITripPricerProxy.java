@@ -3,11 +3,11 @@ package com.tourguidetripdealsservice.proxy;
 import java.util.List;
 import java.util.UUID;
 
-import tripPricer.Provider;
+import com.tourguidetripdealsservice.bean.ProviderBean;
 
 public interface ITripPricerProxy {
 
-	List<Provider> getTripDeals(String apiKey, UUID id, int adults, int children, int duration,
-			int rewardPoints);
+	List<ProviderBean> getTripDeals(String apiKey, UUID id, int adults, int children, int duration,
+			int rewardPoints) throws Exception;
 	
 }

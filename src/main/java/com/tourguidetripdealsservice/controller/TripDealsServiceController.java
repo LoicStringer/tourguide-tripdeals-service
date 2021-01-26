@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.tourguidetripdealsservice.bean.ProviderBean;
 import com.tourguidetripdealsservice.dto.TripPricerDto;
+import com.tourguidetripdealsservice.exception.TripPricerException;
 import com.tourguidetripdealsservice.service.TripDealsService;
 
 @RestController
@@ -19,7 +20,7 @@ public class TripDealsServiceController {
 	private TripDealsService tripDealsService;
 
 	@PostMapping("/trip-deals")
-	public ResponseEntity<List<ProviderBean>> getTripDeals (@RequestBody TripPricerDto tripPricerDto){
+	public ResponseEntity<List<ProviderBean>> getTripDeals (@RequestBody TripPricerDto tripPricerDto) throws TripPricerException{
 		return ResponseEntity.ok(tripDealsService.getTripDeals(tripPricerDto));
 	}
 	

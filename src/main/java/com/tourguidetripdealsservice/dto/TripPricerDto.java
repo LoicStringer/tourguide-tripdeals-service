@@ -13,6 +13,17 @@ public class TripPricerDto {
 	public TripPricerDto() {
 	}
 
+	public TripPricerDto(UUID id, int adultsNumber, int childrenNumber, int tripDuration, int userRewardsPointsSum) {
+		super();
+		this.id = id;
+		this.adultsNumber = adultsNumber;
+		this.childrenNumber = childrenNumber;
+		this.tripDuration = tripDuration;
+		this.userRewardsPointsSum = userRewardsPointsSum;
+	}
+
+
+
 	public UUID getId() {
 		return id;
 	}
